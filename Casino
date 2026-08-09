@@ -1,0 +1,39 @@
+import random
+import time
+kaz = [1, 0, 1, 1, 1, 1, 1]
+cash = 100
+for x in "Hello, this is a casino, the chance to win is 1 in 6, the bet is multiplied by 5 and added to the cash":
+    print(x, end="", flush=True)
+    time.sleep(0.05)
+print("")
+while True:
+    for xx in f"Enter the amount to bet (your cash {cash})":
+        print(xx, end="", flush=True)
+        time.sleep(0.05)
+    print("")
+    try:
+        cashx = int(input())
+        if 0 < cashx <= cash:
+            vipalo = kaz[random.randint(0, 6)]
+            if vipalo == 1:
+                for xxx in f"you lost {cashx} cash":
+                    print(xxx, end="", flush=True)
+                    time.sleep(0.05)
+                print("")
+                cash -= cashx
+            elif vipalo == 0:
+                for z in "Damn, you got lucky":
+                    print(z, end="", flush=True)
+                    time.sleep(0.05)
+                print("")
+                cash += cashx * 5
+        else:
+            for zzz in "you don't have that much cash":
+                print(zzz, end="", flush=True)
+                time.sleep(0.05)
+            print("")
+    except ValueError:
+        for zz in "enter a number or digit":
+            print(zz, end="", flush=True)
+            time.sleep(0.05)
+        print("")
