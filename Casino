@@ -1,6 +1,6 @@
 import random
 import time
-kaz = [1, 0, 1, 1, 1, 1, 1]
+kaz = [1, 0, 1, 1, 1, 1]
 cash = 100
 for x in "Hello, this is a casino, the chance to win is 1 in 6, the bet is multiplied by 5 and added to the cash":
     print(x, end="", flush=True)
